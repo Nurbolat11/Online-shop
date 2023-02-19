@@ -312,38 +312,39 @@ section {
 .products .wrapper .container {
   margin-bottom: 40px;
 }
-.products .wrapper .container .products-card {
+.products .wrapper .container a.products-card {
+  display: block;
   width: 31%;
 }
-.products .wrapper .container .products-card:hover {
+.products .wrapper .container a.products-card:hover {
   /*box-shadow: 0 4px 8px 0 rgba(231, 15, 15, 0.2), 0 6px 20px 0 rgba(238, 15, 15, 0.19);*/
   box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
   transition: 0.4s;
 }
-.products .wrapper .container .products-card p {
+.products .wrapper .container a.products-card p {
   text-align: center;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   color: #434343;
 }
-.products .wrapper .container .products-card p:nth-child(2) {
+.products .wrapper .container a.products-card p:nth-child(2) {
   margin: 20px 0 15px;
 }
-.products .wrapper .container .products-card p:nth-child(3) {
+.products .wrapper .container a.products-card p:nth-child(3) {
   color: #6A6A6A;
   margin-bottom: 10px;
 }
-.products .wrapper .container .products-card p .strike {
+.products .wrapper .container a.products-card p .strike {
   text-decoration: line-through;
   color: #BDBDBD;
 }
-.products .wrapper .container .products-card .cover {
+.products .wrapper .container a.products-card .cover {
   background-color: #F1F0EB;
   position: relative;
   width: 100%;
   padding-top: 120%;
 }
-.products .wrapper .container .products-card .cover img, .products .wrapper .container .products-card .cover .content {
+.products .wrapper .container a.products-card .cover img, .products .wrapper .container a.products-card .cover .content {
   position: absolute;
   top: 0;
   left: 0;
@@ -351,7 +352,7 @@ section {
   height: 100%;
   object-fit: cover;
 }
-.products .wrapper .container .products-card .cover .circle {
+.products .wrapper .container a.products-card .cover .circle {
   position: absolute;
   top: 25%;
   left: 20%;
@@ -361,7 +362,7 @@ section {
   background-color: #fff;
   z-index: 1;
 }
-.products .wrapper .container .products-card .cover img {
+.products .wrapper .container a.products-card .cover img {
   width: 60%;
   height: 85%;
   top: 7.5%;
