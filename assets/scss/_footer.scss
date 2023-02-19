@@ -1,0 +1,203 @@
+.first-block {
+    background-color: #FAFAFA;
+    padding: 70px 0;
+    h2 {
+        @include font(900);
+        font-size: 32px;
+        width: 30%;
+        text-align: center;
+        margin: 0 auto 20px;
+    }
+    p {
+        text-align: center;
+        @include font(700); 
+        color: $lightgray;
+        margin-bottom: 40px;
+    }
+    .email-button {
+        width: 50%;
+        margin: 0 auto;
+        @extend %container;
+        input[type=email] {
+            display: block;
+            width: 92%;  
+            border: 1px solid #EEEEEE;  
+            color: $lightgray;   
+            padding: 12px 0  12px 50px; 
+            outline: none;            
+            &:focus {
+                border: 1px solid $orange;
+            }   
+        }
+        i.fa-envelope {            
+            color: $lightgray;            
+            margin-right: -35px;            
+            z-index: 1;                      
+          }
+        .btn {
+            width: 8%;
+            background-color: $orange;
+            padding: 0;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            border: 1px solid transparent;
+            &:hover {
+                background-color: transparent;
+                border: 1px solid $orange;
+            }
+            i {
+                color: $white;
+                padding: 13px;                
+                &:hover {
+                    color: $orange;
+                }               
+                }
+            }
+        }
+    }
+.pictures-block {
+    display: flex;
+    flex-wrap: wrap;
+    .cover {
+        @include cover (16.66%);
+       width: 16.66%;        
+    }
+}
+.bottom-block {
+    margin-top: 60px;
+    .wrapper {
+        .container {
+            @extend %container;
+            align-items: flex-start;
+            .aroty, .useful-links, .contacts {
+                width: 29%;               
+            }
+            .aroty {
+                .logo {
+                    @extend %container;
+                    align-items: baseline;
+                    width: 40%;
+                    .ellipse {
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 100%;
+                        background-color: $orange;
+                        margin-left: 5px;
+                    }
+                }
+                h2 {
+                    @include font(900);
+                    font-size: 32px;
+                    text-transform: uppercase;
+                    margin-bottom: 15px;
+                }
+                p {
+                    @include font(400);
+                    font-size: 14px;
+                    color: $bluegray;
+                    margin-bottom: 30px;
+                }
+                .links { 
+                    @extend %container;
+                    width: 60%;                  
+                    a {
+                        color: $white;                        
+                        i {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                            font-size: 12px;
+                            border: 1px solid transparent;                                                                          
+                        }
+                        i.fa-facebook {
+                            background-color: #3C5A9A; 
+                            &:hover {
+                                background-color: transparent;
+                                border: 1px solid $orange;
+                                color: $orange;
+                            }                   
+                        }
+                        i.fa-google-plus {
+                            background-color: #DD4A38;
+                            &:hover {
+                                background-color: transparent;
+                                border: 1px solid $orange;
+                                color: $orange;
+                            }                   
+                        }
+                        i.fa-twitter {
+                            background-color: #55ACEF;
+                            &:hover {
+                                background-color: transparent;
+                                border: 1px solid $orange;
+                                color: $orange;
+                            }                   
+                        }
+                        i.fa-recycle {
+                            background-color: #EA4C89;
+                            &:hover {
+                                background-color: transparent;
+                                border: 1px solid $orange;
+                                color: $orange;
+                            }                   
+                        }
+                    }
+                }
+            } 
+            .useful-links {                
+                h3 {
+                    @include font(700);
+                    font-size: 24px;
+                    margin-bottom: 20px;
+                }
+                .links-list {
+                    @extend %container;
+                    .links-list-right, .links-list-left {
+                        @extend %container;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        a {
+                            @include font(400);
+                            font-size: 14px;
+                            color: $bluegray;
+                            margin-bottom: 10px; 
+                        }
+                    }
+                }
+            } 
+            .contacts {
+                h3 {
+                    @include font(700);
+                    font-size: 24px;
+                    margin-bottom: 20px;
+                }
+                .adress, .phone, .email {
+                    display: flex;
+                    align-items: center;
+                    p {
+                        margin: 0 0 15px 25px;
+                        @include font(400);
+                        font-size: 14px;
+                        color: $bluegray;
+                    }
+                }
+                .adress {
+                    align-items: first baseline;
+                }
+                .payment-cards {
+                    margin-top: 20px;
+                    a {
+                        margin-right: 8px;
+                        color: $black;                       
+                        i {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }          
+        }
+    }
+}

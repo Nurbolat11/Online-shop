@@ -1,0 +1,196 @@
+.stuff {
+    .wrapper {
+        @extend %container;
+        .stuff-photos {
+            width: 40%;
+            .cover {
+                @include cover(100%);
+                background-color: #E7E7E7;
+                img {
+                    object-fit: contain;
+                    scale: 1.3;
+                }
+            }
+            .photos-container {
+                @extend %container;
+                margin-top: 3.5%;
+                .cover {
+                    width: 31%;
+                    padding-top: 31%;
+                }
+
+            }
+        }
+        .stuff-info {
+            width: 55%;
+            .stuff-name {
+                @extend %container;
+                h1 {
+                    @include font(900);
+                    font-size: 36px;
+                    text-transform: uppercase;
+                }
+                .price {
+                    color: $orange;
+                }
+            } 
+            .description {
+                @include font(400);
+                color: $gray;
+                margin: 20px 0;
+                text-align: justify;
+            }
+            .settings {
+                @extend %container;
+                .size, .color {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                }
+                h3 {
+                    @include font(700);
+                    text-transform: capitalize;
+                }
+                p {
+                    @include font(500);
+                    color: $gray;
+                    &.active {
+                        color: $black;
+                        border-bottom: 1px solid $black;
+                    }
+                }
+                .color {            
+                    .ellipse-container {
+                        width: 20px;
+                        height: 20px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        .ellipse {
+                            width: 18px;
+                            height: 18px;
+                            border-radius: 100%;
+                            &.active {
+                                width: 14px;
+                                height: 14px;
+                                box-shadow: 0 0 2px 2px rgba($color: #000000, $alpha: 0.1);
+                            }
+                        }
+                    }
+                }         
+            }
+            .stuff-card {
+                box-shadow: 0 0 5px 2px rgba($color: #000000, $alpha: 0.05);
+                padding: 30px;
+                margin: 40px 0;
+                .counter-container {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 30px;
+                    gap: 20px;
+                    .counter {
+                        display: flex;
+                        align-items: center;
+                        border: 1px solid $gray;
+                        border-radius: 5px;
+                        .minus-btn, .plus-btn {
+                            border: none;
+                            background-color: transparent;
+                            padding: 5px 10px;
+                            @include font(400);
+                            font-size: 18px;
+                            color: $gray;
+                            transition: 0.5s;
+                            &:hover {
+                                background-color: $orange;
+                                color: $white;
+                                cursor: pointer;
+                            }
+                        }
+                        .minus-btn {
+                            border-radius: 4px 0 0 4px;
+                        }
+                        .plus-btn {
+                            border-radius: 0 4px 4px 0;
+                        }
+                        .stuff-count {
+                            @include font(400);
+                            font-size: 16px;
+                            width: 50px;
+                            text-align: center;
+                        }
+                    }
+                }
+                .to-cart {
+                    width: 100%;
+                    @extend %container;
+                    justify-content: flex-end;
+                    gap: 20px;
+                    svg {
+                        border: 1px solid $gray;
+                        padding: 14px;
+                        border-radius: 5px;
+                        &:hover {
+                            cursor: pointer;
+                            fill: $orange;
+                        }
+                    }
+                }
+            }
+            .share, .categories, .tags {
+                display: flex;
+                gap: 20px;
+                margin-bottom: 20px;
+                h3 {
+                    @include font(700);
+                    text-transform: capitalize;
+                }
+                a {                   
+                    color: $gray;
+                }
+            }
+              
+        }
+       
+    }
+}
+.additional-info {
+    .wrapper {
+        border: 1px solid $lightlightgray;
+        .additional-info-name {
+            @extend %container;
+            width: 40%;
+            margin: 40px auto 20px;
+            h4 {
+                @include font(500);
+                font-size: 18px;
+                color: $gray;
+                &:nth-child(2), &:nth-child(3) {
+                    color: $lightlightgray;
+                }
+            }
+        }
+        .additional-info-text {
+            width: 50%;
+            margin: 0 auto 40px;
+            text-align: center;
+            p {
+                @include font(500);
+                color: $lightgray;
+                &:nth-child(2), &:nth-child(3) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+.products {
+    .wrapper {
+        h4 {
+            @include font(500);
+            font-size: 26px;
+            color: $gray;
+            margin-bottom: 30px;
+        }
+    }
+}
