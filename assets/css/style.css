@@ -655,11 +655,13 @@ section {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   text-transform: capitalize;
+  cursor: pointer;
 }
 .stuff .wrapper .stuff-info .settings p {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   color: #434343;
+  cursor: pointer;
 }
 .stuff .wrapper .stuff-info .settings p.active {
   color: #000;
@@ -671,6 +673,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 .stuff .wrapper .stuff-info .settings .color .ellipse-container .ellipse {
   width: 18px;
@@ -743,6 +746,7 @@ section {
 }
 .stuff .wrapper .stuff-info .share, .stuff .wrapper .stuff-info .categories, .stuff .wrapper .stuff-info .tags {
   display: flex;
+  align-items: baseline;
   gap: 20px;
   margin-bottom: 20px;
 }
@@ -767,6 +771,7 @@ section {
   font-weight: 500;
   font-size: 18px;
   color: #434343;
+  cursor: pointer;
 }
 .additional-info .wrapper .additional-info-name h4:nth-child(2), .additional-info .wrapper .additional-info-name h4:nth-child(3) {
   color: #BDBDBD;
