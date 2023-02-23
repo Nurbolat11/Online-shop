@@ -33,7 +33,7 @@ input[type=text] {
   background-color: #EF5DA8;
 }
 
-.additional-info .wrapper .additional-info-name, .stuff .wrapper .stuff-info .stuff-card .to-cart, .stuff .wrapper .stuff-info .settings, .stuff .wrapper .stuff-info .stuff-name, .stuff .wrapper .stuff-photos .photos-container, .stuff .wrapper, .bottom-block .wrapper .container .useful-links .links-list .links-list-right, .bottom-block .wrapper .container .useful-links .links-list .links-list-left, .bottom-block .wrapper .container .useful-links .links-list, .bottom-block .wrapper .container .aroty .links, .bottom-block .wrapper .container .aroty .logo, .bottom-block .wrapper .container, .first-block .email-button, .page-title, .products .wrapper .container, .category .wrapper .container, .main .wrapper, header .wrapper .logo, header .wrapper {
+.basket-total .wrapper .check-total .container, .additional-info .wrapper .additional-info-name, .stuff .wrapper .stuff-info .stuff-card .to-cart, .stuff .wrapper .stuff-info .settings, .stuff .wrapper .stuff-info .stuff-name, .stuff .wrapper .stuff-photos .photos-container, .stuff .wrapper, .bottom-block .wrapper .container .useful-links .links-list .links-list-right, .bottom-block .wrapper .container .useful-links .links-list .links-list-left, .bottom-block .wrapper .container .useful-links .links-list, .bottom-block .wrapper .container .aroty .links, .bottom-block .wrapper .container .aroty .logo, .bottom-block .wrapper .container, .first-block .email-button, .page-title, .products .wrapper .container, .category .wrapper .container, .main .wrapper, header .wrapper .logo, header .wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -471,6 +471,7 @@ section {
 
 .bottom-block {
   margin-top: 60px;
+  margin-bottom: 40px;
 }
 .bottom-block .wrapper .container {
   align-items: flex-start;
@@ -696,40 +697,6 @@ section {
   margin-bottom: 30px;
   gap: 20px;
 }
-.stuff .wrapper .stuff-info .stuff-card .counter-container .counter {
-  display: flex;
-  align-items: center;
-  border: 1px solid #434343;
-  border-radius: 5px;
-}
-.stuff .wrapper .stuff-info .stuff-card .counter-container .counter .minus-btn, .stuff .wrapper .stuff-info .stuff-card .counter-container .counter .plus-btn {
-  border: none;
-  background-color: transparent;
-  padding: 5px 10px;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  color: #434343;
-  transition: 0.5s;
-}
-.stuff .wrapper .stuff-info .stuff-card .counter-container .counter .minus-btn:hover, .stuff .wrapper .stuff-info .stuff-card .counter-container .counter .plus-btn:hover {
-  background-color: #F25A42;
-  color: #fff;
-  cursor: pointer;
-}
-.stuff .wrapper .stuff-info .stuff-card .counter-container .counter .minus-btn {
-  border-radius: 4px 0 0 4px;
-}
-.stuff .wrapper .stuff-info .stuff-card .counter-container .counter .plus-btn {
-  border-radius: 0 4px 4px 0;
-}
-.stuff .wrapper .stuff-info .stuff-card .counter-container .counter .stuff-count {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  width: 50px;
-  text-align: center;
-}
 .stuff .wrapper .stuff-info .stuff-card .to-cart {
   width: 100%;
   justify-content: flex-end;
@@ -743,6 +710,10 @@ section {
 .stuff .wrapper .stuff-info .stuff-card .to-cart svg:hover {
   cursor: pointer;
   fill: #F25A42;
+}
+.stuff .wrapper .stuff-info .stuff-card .to-cart a input {
+  width: 100%;
+  padding: 10px 30px;
 }
 .stuff .wrapper .stuff-info .share, .stuff .wrapper .stuff-info .categories, .stuff .wrapper .stuff-info .tags {
   display: flex;
@@ -796,6 +767,203 @@ section {
   font-size: 26px;
   color: #434343;
   margin-bottom: 30px;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  border: 1px solid #434343;
+  border-radius: 5px;
+}
+.counter .minus-btn, .counter .plus-btn {
+  border: none;
+  background-color: transparent;
+  padding: 5px 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #434343;
+  transition: 0.5s;
+}
+.counter .minus-btn:hover, .counter .plus-btn:hover {
+  background-color: #F25A42;
+  color: #fff;
+  cursor: pointer;
+}
+.counter .minus-btn {
+  border-radius: 4px 0 0 4px;
+}
+.counter .plus-btn {
+  border-radius: 0 4px 4px 0;
+}
+.counter .stuff-count {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  width: 50px;
+  text-align: center;
+}
+
+.shopping-cart .wrapper {
+  border: 1px solid #6A6A6A;
+}
+.shopping-cart .wrapper p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: #6A6A6A;
+  text-align: center;
+  text-transform: capitalize;
+}
+.shopping-cart .wrapper #first {
+  width: 45%;
+}
+.shopping-cart .wrapper #second, .shopping-cart .wrapper #third, .shopping-cart .wrapper #forth {
+  width: 15%;
+}
+.shopping-cart .wrapper #fifth {
+  width: 10%;
+}
+.shopping-cart .wrapper .basket-name {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #6A6A6A;
+  padding: 25px 0;
+}
+.shopping-cart .wrapper .basket-content {
+  padding: 25px 0;
+}
+.shopping-cart .wrapper .basket-content .basket-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.shopping-cart .wrapper .basket-content .basket-item:last-child {
+  margin-bottom: 0;
+}
+.shopping-cart .wrapper .basket-content .basket-item #delete {
+  font-weight: 700;
+  transition: 0.5s;
+  color: #000;
+}
+.shopping-cart .wrapper .basket-content .basket-item #delete:hover {
+  color: #F25A42;
+  cursor: pointer;
+}
+.shopping-cart .wrapper .basket-content .basket-item #first {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.shopping-cart .wrapper .basket-content .basket-item #first p {
+  text-align: left;
+}
+.shopping-cart .wrapper .basket-content .basket-item #first p.size {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.shopping-cart .wrapper .basket-content .basket-item #first .settings {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+.shopping-cart .wrapper .basket-content .basket-item #first .settings .ellipse {
+  width: 14px;
+  height: 14px;
+  color: #000;
+  border-radius: 100%;
+}
+.shopping-cart .wrapper .basket-content .basket-item #third {
+  display: flex;
+  justify-content: center;
+}
+.shopping-cart .wrapper .basket-content .basket-item .products-card {
+  display: block;
+  width: 20%;
+}
+.shopping-cart .wrapper .basket-content .basket-item .products-card .cover {
+  background-color: #F1F0EB;
+  position: relative;
+  width: 100%;
+  padding-top: 120%;
+}
+.shopping-cart .wrapper .basket-content .basket-item .products-card .cover img, .shopping-cart .wrapper .basket-content .basket-item .products-card .cover .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.shopping-cart .wrapper .basket-content .basket-item .products-card .cover .circle {
+  position: absolute;
+  top: 25%;
+  left: 20%;
+  width: 60%;
+  height: 50%;
+  border-radius: 100%;
+  background-color: #fff;
+  z-index: 1;
+}
+.shopping-cart .wrapper .basket-content .basket-item .products-card .cover img {
+  width: 60%;
+  height: 85%;
+  top: 7.5%;
+  left: 20%;
+  z-index: 2;
+}
+
+.basket-total .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+}
+.basket-total .wrapper .check-total {
+  width: 35%;
+  padding: 30px 20px;
+  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.1);
+}
+.basket-total .wrapper .check-total h3 {
+  text-transform: capitalize;
+  font-weight: 700;
+  color: #434343;
+  margin-bottom: 20px;
+}
+.basket-total .wrapper .check-total .calculate {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #434343;
+  text-decoration: underline;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+}
+.basket-total .wrapper .check-total .container {
+  margin-bottom: 15px;
+}
+.basket-total .wrapper .check-total .container:last-child {
+  border-top: 1px solid #434343;
+  padding-top: 20px;
+  margin-bottom: 0;
+}
+.basket-total .wrapper .check-total .container p {
+  color: #434343;
+}
+.basket-total .wrapper .check-total .container .title-text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.basket-total .wrapper .check-total .container .value-text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.basket-total .wrapper .btn.orange {
+  width: 15%;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
 }
 
 /*# sourceMappingURL=style.css.map */
