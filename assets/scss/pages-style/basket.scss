@@ -140,6 +140,12 @@
                     @include font(500);
                     text-transform: uppercase;
                 }
+                select {
+                    border: none;
+                    font-size: 16px;
+                    color: $gray; 
+                    cursor: pointer;                                     
+                }
             }          
         }
         .btn.orange {

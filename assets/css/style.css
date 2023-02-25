@@ -600,6 +600,19 @@ section {
   font-size: 20px;
 }
 
+.copyright {
+  text-align: center;
+  color: #6A6A6A;
+  margin-top: 30px;
+}
+.copyright p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  border-top: 1px solid #BDBDBD;
+  padding: 10px 0;
+}
+
 .stuff .wrapper .stuff-photos {
   width: 40%;
 }
@@ -958,6 +971,12 @@ section {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   text-transform: uppercase;
+}
+.basket-total .wrapper .check-total .container select {
+  border: none;
+  font-size: 16px;
+  color: #434343;
+  cursor: pointer;
 }
 .basket-total .wrapper .btn.orange {
   width: 15%;
