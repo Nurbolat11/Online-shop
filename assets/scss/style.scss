@@ -106,6 +106,12 @@ section {
                 color: $white;
                 margin-bottom: 40px;
             }
+            input {
+                text-transform: uppercase;
+                font-weight: 500;
+                font-size: 14px;
+                padding: 15px 45px;
+            }
             .cover {
                 @include cover(100%);
                 img {
@@ -186,6 +192,8 @@ section {
             background-color: $orange;
             text-transform: uppercase;
             padding: 15px 0;
+            font-weight: 500;
+            font-size: 14px;
             &:hover {
                 background-color: transparent;
                 color: $orange;
@@ -284,3 +292,4 @@ section {
 @import 'footer';
 @import './pages-style/product.scss';
 @import './pages-style/basket.scss';
+@import './pages-style/order.scss';

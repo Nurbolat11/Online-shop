@@ -36,6 +36,9 @@ header {
             .nav-icons {
                 padding-left: 20px;
                 border-left: 1px solid $gray;
+                a {
+                    color: $black;
+                }
                 svg:first-child {
                     margin-right: 10px;
                 }

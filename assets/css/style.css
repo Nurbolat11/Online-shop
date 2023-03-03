@@ -11,7 +11,7 @@ p, h1, h2, h3, h4, h5, h6, body {
   background-color: transparent;
 }
 
-input[type=text] {
+input[type=text], input[type=number], input[type=email] {
   border: none;
   outline: none;
   background-color: transparent;
@@ -33,7 +33,7 @@ input[type=text] {
   background-color: #EF5DA8;
 }
 
-.basket-total .wrapper .check-total .container, .additional-info .wrapper .additional-info-name, .stuff .wrapper .stuff-info .stuff-card .to-cart, .stuff .wrapper .stuff-info .settings, .stuff .wrapper .stuff-info .stuff-name, .stuff .wrapper .stuff-photos .photos-container, .stuff .wrapper, .bottom-block .wrapper .container .useful-links .links-list .links-list-right, .bottom-block .wrapper .container .useful-links .links-list .links-list-left, .bottom-block .wrapper .container .useful-links .links-list, .bottom-block .wrapper .container .aroty .links, .bottom-block .wrapper .container .aroty .logo, .bottom-block .wrapper .container, .first-block .email-button, .page-title, .products .wrapper .container, .category .wrapper .container, .main .wrapper, header .wrapper .logo, header .wrapper {
+.order .wrapper .payment-order .check-order .text-container, .order .wrapper .payment-order, .order .wrapper .form-order form .container, .basket-total .wrapper .check-total .container, .additional-info .wrapper .additional-info-name, .stuff .wrapper .stuff-info .stuff-card .to-cart, .stuff .wrapper .stuff-info .settings, .stuff .wrapper .stuff-info .stuff-name, .stuff .wrapper .stuff-photos .photos-container, .stuff .wrapper, .bottom-block .wrapper .container .useful-links .links-list .links-list-right, .bottom-block .wrapper .container .useful-links .links-list .links-list-left, .bottom-block .wrapper .container .useful-links .links-list, .bottom-block .wrapper .container .aroty .links, .bottom-block .wrapper .container .aroty .logo, .bottom-block .wrapper .container, .first-block .email-button, .page-title, .products .wrapper .container, .category .wrapper .container, .main .wrapper, header .wrapper .logo, header .wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -165,6 +165,9 @@ header .wrapper .nav-container .nav-icons {
   padding-left: 20px;
   border-left: 1px solid #434343;
 }
+header .wrapper .nav-container .nav-icons a {
+  color: #000;
+}
 header .wrapper .nav-container .nav-icons svg:first-child {
   margin-right: 10px;
 }
@@ -185,6 +188,12 @@ section {
   font-size: 48px;
   color: #fff;
   margin-bottom: 40px;
+}
+.main .wrapper .main-block input {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 15px 45px;
 }
 .main .wrapper .main-block .cover {
   position: relative;
@@ -287,6 +296,8 @@ section {
   background-color: #F25A42;
   text-transform: uppercase;
   padding: 15px 0;
+  font-weight: 500;
+  font-size: 14px;
 }
 .products .wrapper .btn:hover {
   background-color: transparent;
@@ -594,10 +605,6 @@ section {
 }
 .bottom-block .wrapper .container .contacts .payment-cards a {
   margin-right: 8px;
-  color: #000;
-}
-.bottom-block .wrapper .container .contacts .payment-cards a i {
-  font-size: 20px;
 }
 
 .copyright {
@@ -727,6 +734,8 @@ section {
 .stuff .wrapper .stuff-info .stuff-card .to-cart a input {
   width: 100%;
   padding: 10px 30px;
+  font-weight: 500;
+  font-size: 14px;
 }
 .stuff .wrapper .stuff-info .share, .stuff .wrapper .stuff-info .categories, .stuff .wrapper .stuff-info .tags {
   display: flex;
@@ -978,11 +987,178 @@ section {
   color: #434343;
   cursor: pointer;
 }
-.basket-total .wrapper .btn.orange {
-  width: 15%;
+.basket-total .wrapper a .btn.orange {
+  width: 100%;
+  padding: 15px 45px;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 14px;
+}
+
+.order .wrapper .coupon {
+  background-color: #F2F2F2;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 10px;
+  padding: 15px 15px;
+  color: #434343;
+}
+.order .wrapper .coupon span {
+  font-weight: 600;
+}
+.order .wrapper h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-transform: capitalize;
+  font-size: 30px;
+  margin: 30px 0;
+  color: #202020;
+}
+.order .wrapper .form-order {
+  border-bottom: 1px solid #BDBDBD;
+}
+.order .wrapper .form-order form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+.order .wrapper .form-order form .container input {
+  width: 48%;
+}
+.order .wrapper .form-order form input {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #BDBDBD;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: #434343;
+  margin-top: 20px;
+}
+.order .wrapper .form-order form input::placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.order .wrapper .form-order h3 {
+  margin: 25px 0 10px;
+}
+.order .wrapper .form-order textarea {
+  border: none;
+  outline: none;
+  resize: none;
+  width: 100%;
+  height: 80px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+.order .wrapper .payment-order {
+  align-items: flex-start;
+}
+.order .wrapper .payment-order h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: #434343;
+}
+.order .wrapper .payment-order .check-order {
+  width: 48%;
+}
+.order .wrapper .payment-order .check-order .text-container {
+  border-bottom: 1px dashed #BDBDBD;
+  padding: 10px 5px;
+}
+.order .wrapper .payment-order .check-order .text-container:last-child {
+  border-bottom: none;
+  margin-top: 15px;
+}
+.order .wrapper .payment-order .check-order .text-container h3 {
+  text-transform: capitalize;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: #434343;
+}
+.order .wrapper .payment-order .check-order .text-container p {
+  color: #6A6A6A;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+.order .wrapper .payment-order .check-order .text-container p.bold {
+  font-weight: 700;
+}
+.order .wrapper .payment-order .payment {
+  width: 48%;
+}
+.order .wrapper .payment-order .payment h2 {
+  margin-bottom: 40px;
+}
+.order .wrapper .payment-order .payment-card {
+  box-shadow: 0 1px 5px 3px rgba(0, 0, 0, 0.1);
+  padding: 15px 20px 30px;
+}
+.order .wrapper .payment-order .payment-card p {
+  background-color: transparent;
+  padding: 0;
+  color: #434343;
+}
+.order .wrapper .payment-order .payment .payment-card .money-cards {
+  position: relative;
+  width: 45%;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid #BDBDBD;
+}
+.order .wrapper .payment-order .payment .payment-card .money-cards .paypal {
+  position: absolute;
+  top: -11px;
+  left: 15px;
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+.order .wrapper .payment-order .payment .payment-card .money-cards .paypal p {
+  background-color: #fff;
+  color: #071F86;
+  font-style: italic;
+}
+.order .wrapper .payment-order .payment .payment-card .money-cards .paypal p span {
+  color: #109FD4;
+}
+.order .wrapper .payment-order .payment .payment-card .money-cards .paypal p#masterCard, .order .wrapper .payment-order .payment .payment-card .money-cards .paypal p#visa, .order .wrapper .payment-order .payment .payment-card .money-cards .paypal p#maestro, .order .wrapper .payment-order .payment .payment-card .money-cards .paypal p#americanExpress {
+  display: none;
+}
+.order .wrapper .payment-order .payment .btn-container {
+  margin-top: 40px;
+  display: flex;
+  justify-content: flex-end;
+}
+.order .wrapper .payment-order .payment .btn-container input {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 15px 0;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  gap: 10px;
+  color: #434343;
+}
+.checkbox-container .checkbox {
+  width: 20px;
+  height: 20px;
+  background-color: #F2F2F2;
+  border: 1px solid #BDBDBD;
+  cursor: pointer;
+}
+.checkbox-container .checkbox svg {
+  display: none;
+}
+.checkbox-container .checkbox.checked svg {
+  display: inline-block;
+  fill: #F25A42;
 }
 
 /*# sourceMappingURL=style.css.map */
